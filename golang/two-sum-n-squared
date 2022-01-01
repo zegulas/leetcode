@@ -1,0 +1,18 @@
+func twoSum(nums []int, target int) []int {
+  result := make([]int,2)
+  for i:=0; i<len(nums); i++ {
+    for j:=i+1; j < len(nums); j++ {
+      if(nums[i]+nums[j]==target) {
+        result[0]=i
+        result[1]=j
+      }
+    }
+  }
+  return result
+}
+
+/*
+https://leetcode.com/problems/two-sum
+Runtime: 28 ms, faster than 33.59% of Go online submissions for Two Sum.
+Memory Usage: 3.8 MB, less than 88.21% of Go online submissions for Two Sum.
+*/
