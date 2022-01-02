@@ -1,0 +1,16 @@
+func twoSum(nums []int, target int) []int {
+    indexMap := make(map[int]int)
+    for currIndex, currNum := range nums {
+        if requiredInx, isPresent := indexMap[target-currNum]; isPresent {
+            return []int{requiredInx, currIndex}
+        }
+        indexMap[currNum] = currIndex
+    }
+    return []int{}
+}
+
+/*
+https://leetcode.com/problems/two-sum
+Runtime: 4 ms, faster than 96.98% of Go online submissions for Two Sum.
+Memory Usage: 4.3 MB, less than 28.07% of Go online submissions for Two Sum.
+*/
