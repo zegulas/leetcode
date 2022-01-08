@@ -14,3 +14,18 @@ https://leetcode.com/problems/two-sum
 Runtime: 4 ms, faster than 96.98% of Go online submissions for Two Sum.
 Memory Usage: 4.3 MB, less than 28.07% of Go online submissions for Two Sum.
 */
+
+/*
+func twoSum(nums []int, target int) []int {
+  var checker = make(map[int]int)  
+  for currentIndex, currentValue:= range nums {
+    checkerIndex, isPresent := checker[target-currentValue]
+    if(isPresent) {
+      return []int{currentIndex, checkerIndex}
+    } else {
+      checker[currentValue] = currentIndex
+    }
+  }
+  return []int{}
+}
+*/
