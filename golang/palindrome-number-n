@@ -1,0 +1,21 @@
+import "strconv"
+
+func isPalindrome(x int) bool {
+  x_str := strconv.Itoa(x)
+  pointer_1 := 0
+  pointer_2 := len(x_str) - 1
+  for pointer_1 < pointer_2 {
+    if(x_str[pointer_1]!=x_str[pointer_2]) {
+      return false
+    }
+    pointer_1 += 1
+    pointer_2 -= 1
+  }
+  return true
+}
+
+/*
+  https://leetcode.com/problems/palindrome-number
+  Runtime: 4 ms, faster than 99.19% of Go online submissions for Palindrome Number.
+  Memory Usage: 5.2 MB, less than 74.01% of Go online submissions for Palindrome Number.
+*/
